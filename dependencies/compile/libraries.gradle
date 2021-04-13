@@ -1,1 +1,10 @@
+/**
+ * shared data module.
+ * assume it is part of libraries,
+ * that's why we define this module
+ * on {@link libraries}
+ */
+include ':shared-data:product'
+
+// common module
 include ':libraries:network'

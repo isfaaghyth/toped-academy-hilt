@@ -15,7 +15,7 @@
  */
 
 ext {
-    applicationId = "app.isfaaghyth.starter"
+    applicationId = "app.topedacademy"
     buildTools = "29.0.2"
     compileSdk = 29
     minSdk = 18
@@ -44,10 +44,11 @@ ext {
             "daggerAndroid"             : "com.google.dagger:dagger-android:2.34",
             "daggerCompiler"            : "com.google.dagger:dagger-compiler:2.34",
             "daggerAndroidCompiler"     : "com.google.dagger:dagger-android-processor:2.34",
-            "hiltAndroid"               : "com.google.dagger:hilt-android:2.33-beta",
-            "hiltAndroidCompiler"       : "com.google.dagger:hilt-android-compiler:2.33-beta",
             "deepLink"                  : "com.airbnb:deeplinkdispatch:4.1.0",
             "deepLinkProcessor"         : "com.airbnb:deeplinkdispatch-processor:4.1.0",
+            "gson"                      : "com.google.code.gson:gson:2.8.6",
+            "hiltAndroid"               : "com.google.dagger:hilt-android:2.33-beta",
+            "hiltAndroidCompiler"       : "com.google.dagger:hilt-android-compiler:2.33-beta",
     ]
 
     testing = [

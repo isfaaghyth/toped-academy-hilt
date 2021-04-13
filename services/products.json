@@ -1,6 +1,6 @@
 {
   "status": "OK",
-  "item_count": 10,
+  "total": 10,
   "products": [
     {
       "id": 123,

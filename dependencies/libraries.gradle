@@ -16,6 +16,10 @@
 
 ext {
 
+    data = [
+            "product"       : ":shared-data:product"
+    ]
+
     libraries = [
             "network"       : ":libraries:network"
     ]
