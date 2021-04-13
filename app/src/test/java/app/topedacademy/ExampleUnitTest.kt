@@ -1,4 +1,4 @@
-package app.topedacademy.hilt
+package app.topedacademy
 
 import org.junit.Test
 
