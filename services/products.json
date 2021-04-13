@@ -1,0 +1,96 @@
+{
+  "status": "OK",
+  "item_count": 10,
+  "products": [
+    {
+      "id": 123,
+      "name": "SSD Kingston V400 120GB SATA3 DISK Original Baru 2.5\"",
+      "banner": "https://images.tokopedia.net/img/cache/900/VqbcmM/2021/3/22/70fc993e-ff95-4b56-9d01-9ea89a36c4d0.png",
+      "link": "https://www.tokopedia.com/pusatram/ssd-kingston-v400-120gb-sata3-solid-state-disk-original-baru-ssd-2-5",
+      "price": "Rp305.000",
+      "seller": {
+        "id": 234,
+        "name": "PusatRam",
+        "location": "Bekasi",
+        "type": "Power Merchant",
+        "badge": "https://assets.tokopedia.net/assets-tokopedia-lite/v2/zeus/kratos/54fa280e.svg",
+        "avatar": "https://images.tokopedia.net/img/cache/215-square/GAnVPX/2020/11/6/a5aa3442-ca7a-4d66-8c81-ff1f0f6cc4c8.jpg"
+      }
+    },
+    {
+      "id": 234,
+      "name": "Logitech C920 HD Pro Webcam",
+      "banner": "https://images.tokopedia.net/img/cache/900/VqbcmM/2020/12/2/a1bba4d6-91fc-4296-8633-87a679bbcd9a.jpg",
+      "link": "https://www.tokopedia.com/logitech/logitech-c920-hd-pro-webcam",
+      "price": "Rp1.051.000",
+      "seller": {
+        "id": 345,
+        "name": "Logitech",
+        "location": "Jakarta",
+        "type": "Official Store",
+        "badge": "https://assets.tokopedia.net/assets-tokopedia-lite/v2/zeus/kratos/3934e019.svg",
+        "avatar": "https://images.tokopedia.net/img/cache/215-square/shops-1/2018/3/13/2642798/2642798_9ecf817b-e928-45e8-a36e-4fab10514133.png"
+      }
+    },
+    {
+      "id": 345,
+      "name": "Xiaomi Official Miband 5 Mi Band Smartband Smartwatch Smart Band",
+      "banner": "https://images.tokopedia.net/img/cache/900/VqbcmM/2021/4/10/ab2d4f37-1831-47f5-82f3-e78ce1464868.png",
+      "link": "https://www.tokopedia.com/xiaomi/xiaomi-official-miband-5-mi-band-smartband-smartwatch-smart-band",
+      "price": "Rp439.000",
+      "seller": {
+        "id": 456,
+        "name": "Xiaomi Indonesia",
+        "location": "Jakarta",
+        "type": "Official Store",
+        "badge": "https://assets.tokopedia.net/assets-tokopedia-lite/v2/zeus/kratos/3934e019.svg",
+        "avatar": "https://images.tokopedia.net/img/cache/215-square/shops-1/2020/3/24/8043004/8043004_0e878788-904e-45ef-a44d-d3a84494f1c1.jpg"
+      }
+    },
+    {
+      "id": 456,
+      "name": "Samsung A01 Core 2/32 GB Garansi Resmi SEIN - Hitam",
+      "banner": "https://images.tokopedia.net/img/cache/900/product-1/2020/8/11/2608727/2608727_e31b4bef-2e34-44ef-912d-976e2d23e0f8_800_800",
+      "link": "https://www.tokopedia.com/gudang-hp/samsung-a01-core-2-32-gb-garansi-resmi-sein-hitam",
+      "price": "Rp439.000",
+      "seller": {
+        "id": 567,
+        "name": "Gudang-HP",
+        "location": "Jakarta",
+        "type": "Official Store",
+        "badge": "https://assets.tokopedia.net/assets-tokopedia-lite/v2/zeus/kratos/3934e019.svg",
+        "avatar": "https://images.tokopedia.net/img/cache/215-square/GAnVPX/2020/12/12/7e3a1bc3-f0a8-4e33-bc9e-29532a8fd2d1.jpg"
+      }
+    },
+    {
+      "id": 567,
+      "name": "Macbook Pro 13 2020 M1 16GB 512GB/1TB CTO Customise Order - 16GB/256GB",
+      "banner": "https://images.tokopedia.net/img/cache/900/VqbcmM/2020/12/1/453ddf54-07c6-49b8-9377-f3924c0194fd.jpg",
+      "link": "https://www.tokopedia.com/labcom/macbook-pro-13-2020-m1-16gb-512gb-1tb-cto-customise-order-16gb-256gb",
+      "price": "Rp28.600.000",
+      "seller": {
+        "id": 678,
+        "name": "labcom",
+        "location": "Jakarta",
+        "type": "Official Store",
+        "badge": "https://assets.tokopedia.net/assets-tokopedia-lite/v2/zeus/kratos/3934e019.svg",
+        "avatar": "https://images.tokopedia.net/img/cache/215-square/shops-1/2019/3/12/3246683/3246683_d754d1dc-6db9-4ee7-a175-badabcd27de4.jpg"
+      }
+    },
+    {
+      "id": 678,
+      "name": "Seagate BarraCuda Harddisk Internal PC 8TB SATA",
+      "banner": "https://images.tokopedia.net/img/cache/900/VqbcmM/2021/4/9/a5f50f44-0fa9-43c8-b5d8-fddacec72367.jpg",
+      "link": "https://www.tokopedia.com/seagate/seagate-barracuda-harddisk-internal-pc-8tb-sata",
+      "price": "Rp3.095.000",
+      "seller": {
+        "id": 789,
+        "name": "Seagate",
+        "location": "Jakarta",
+        "type": "Official Store",
+        "badge": "https://assets.tokopedia.net/assets-tokopedia-lite/v2/zeus/kratos/3934e019.svg",
+        "avatar": "https://images.tokopedia.net/img/cache/215-square/shops-1/2018/1/16/2714562/2714562_64e11e0e-cfab-4f99-bf88-d147cb298344.jpg"
+      }
+    }
+  ]
+}
