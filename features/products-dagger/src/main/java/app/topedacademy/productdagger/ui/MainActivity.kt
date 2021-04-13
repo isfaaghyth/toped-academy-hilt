@@ -1,7 +1,8 @@
-package app.topedacademy.productdagger
+package app.topedacademy.productdagger.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import app.topedacademy.productdagger.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
