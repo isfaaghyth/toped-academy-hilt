@@ -1,7 +1,7 @@
 apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
-apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-kapt'
+apply plugin: 'dagger.hilt.android.plugin'
 
 android {
     compileSdkVersion rootProject.ext.compileSdk
@@ -13,6 +13,12 @@ android {
         versionName rootProject.ext.versionName
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments["dagger.hilt.disableModulesHaveInstallInCheck"] = "true"
+            }
+        }
     }
 
     buildTypes {
@@ -40,14 +46,22 @@ android {
     }
 }
 
+kapt {
+    correctErrorTypes true
+}
+
 dependencies {
     implementation rootProject.ext.main.kotlin
 
-    // dependenciesInjection
+    // dagger
     implementation rootProject.ext.misc.dagger
     implementation rootProject.ext.misc.daggerAndroid
     kapt rootProject.ext.misc.daggerCompiler
     kapt rootProject.ext.misc.daggerAndroidCompiler
+
+    // hilt
+    implementation rootProject.ext.misc.hiltAndroid
+    kapt rootProject.ext.misc.hiltAndroidCompiler
 
     // appLink
     implementation rootProject.ext.misc.deepLink
