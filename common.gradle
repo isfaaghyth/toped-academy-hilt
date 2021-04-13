@@ -1,0 +1,74 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+
+android {
+    compileSdkVersion rootProject.ext.compileSdk
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.minSdk
+        targetSdkVersion rootProject.ext.targetSdk
+        versionCode rootProject.ext.versionCode
+        versionName rootProject.ext.versionName
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        debug {
+
+        }
+        release {
+            minifyEnabled false
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    sourceSets.each {
+        it.java.srcDirs += "src/$it.name/kotlin"
+    }
+
+    testOptions {
+        unitTests.all {
+            testLogging.events = ["passed", "skipped", "failed"]
+        }
+    }
+}
+
+dependencies {
+    implementation rootProject.ext.main.kotlin
+
+    // dependenciesInjection
+    implementation rootProject.ext.misc.dagger
+    implementation rootProject.ext.misc.daggerAndroid
+    kapt rootProject.ext.misc.daggerCompiler
+    kapt rootProject.ext.misc.daggerAndroidCompiler
+
+    // appLink
+    implementation rootProject.ext.misc.deepLink
+    kapt rootProject.ext.misc.deepLinkProcessor
+
+    // coroutines
+    implementation rootProject.ext.misc.coroutines
+    implementation rootProject.ext.misc.coroutinesAndroid
+
+    // testing
+    testImplementation rootProject.ext.testing.coreTesting
+    testImplementation rootProject.ext.testing.coroutinesTest
+    testImplementation rootProject.ext.testing.junit
+    testImplementation rootProject.ext.testing.kotlinReflect
+    testImplementation rootProject.ext.testing.mockWebServer
+    androidTestImplementation rootProject.ext.testing.core
+    androidTestImplementation rootProject.ext.testing.espressoCore
+    androidTestImplementation rootProject.ext.testing.espressoContrib
+    androidTestImplementation rootProject.ext.testing.expressoIdlingResources
+    androidTestImplementation rootProject.ext.testing.extJunit
+    androidTestImplementation rootProject.ext.testing.extTruth
+    androidTestImplementation rootProject.ext.testing.runner
+    androidTestImplementation rootProject.ext.testing.rules
+}

@@ -1,0 +1,8 @@
+apply from: "$rootDir/common.gradle"
+
+dependencies {
+    implementation rootProject.ext.network.converterGson
+    implementation rootProject.ext.network.loggingInterceptor
+    implementation rootProject.ext.network.okHttp
+    implementation rootProject.ext.network.retrofit
+}

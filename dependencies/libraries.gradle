@@ -1,0 +1,7 @@
+ext {
+
+    libraries = [
+            "network"       : ":libraries:network"
+    ]
+
+}

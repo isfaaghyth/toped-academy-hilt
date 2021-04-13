@@ -1,0 +1,2 @@
+apply from: "dependencies/compile/libraries.gradle"
+apply from: "dependencies/compile/mainapp.gradle"

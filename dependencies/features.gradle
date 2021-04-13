@@ -1,0 +1,7 @@
+ext {
+
+    features = [
+            "home"       : ":features:home"
+    ]
+
+}
