@@ -28,6 +28,8 @@ android {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation project(rootProject.ext.features.products_dagger)
+
     implementation rootProject.ext.main.kotlin
 
     implementation rootProject.ext.misc.appCompat
