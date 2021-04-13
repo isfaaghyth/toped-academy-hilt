@@ -5,12 +5,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_margin="10dp"
     android:clickable="true"
     android:focusable="true"
+    android:padding="10dp"
     android:foreground="?selectableItemBackground"
-    android:background="@android:color/white"
-    android:paddingBottom="16dp">
+    android:background="@android:color/white">
 
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/img_banner"
