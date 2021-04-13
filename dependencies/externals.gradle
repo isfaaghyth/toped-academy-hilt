@@ -1,3 +1,19 @@
+/*
+ * Copyright (C) 2017 Tokopedia Android Academy Team
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
 ext {
     applicationId = "app.isfaaghyth.starter"
     buildTools = "29.0.2"
@@ -24,10 +40,10 @@ ext {
             "coreKtx"                   : "androidx.core:core-ktx:1.2.0",
             "coroutines"                : "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.3.3",
             "coroutinesAndroid"         : "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.3.3",
-            "dagger"                    : "com.google.dagger:dagger:0.9.2",
-            "daggerAndroid"             : "com.google.dagger:dagger-android:2.15",
-            "daggerCompiler"            : "com.google.dagger:dagger-compiler:0.9.2",
-            "daggerAndroidCompiler"     : "com.google.dagger:dagger-android-processor:0.9.2",
+            "dagger"                    : "com.google.dagger:dagger:2.34",
+            "daggerAndroid"             : "com.google.dagger:dagger-android:2.34",
+            "daggerCompiler"            : "com.google.dagger:dagger-compiler:2.34",
+            "daggerAndroidCompiler"     : "com.google.dagger:dagger-android-processor:2.34",
             "deepLink"                  : "com.airbnb:deeplinkdispatch:4.1.0",
             "deepLinkProcessor"         : "com.airbnb:deeplinkdispatch-processor:4.1.0",
     ]
