@@ -1,5 +1,9 @@
-- name: "Build Android project"
-  uses: vgaidarji/android-github-actions-build@v1.0.1
-  on: pull_request
-  with:
-    args: "./gradlew assembleDebug"
+name: "PR Checker"
+on: [pull_request]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: vgaidarji/android-github-actions-build@v1.0.1
+    - name: Build the Docker image
+      run: docker build --file Dockerfile . 
