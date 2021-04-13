@@ -24,13 +24,28 @@ android {
         }
     }
 
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+
+    viewBinding {
+        enabled true
+    }
 }
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation project(rootProject.ext.libraries.abstraction)
     implementation project(rootProject.ext.features.products_dagger)
 
     implementation rootProject.ext.main.kotlin
+    implementation rootProject.ext.misc.coil
+    implementation rootProject.ext.misc.coilSvg
 
     implementation rootProject.ext.misc.appCompat
     implementation rootProject.ext.misc.coreKtx
