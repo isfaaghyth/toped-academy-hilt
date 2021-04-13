@@ -1,7 +1,7 @@
 ext {
 
     features = [
-            "home"       : ":features:home"
+            "products_dagger"       : ":features:products-dagger"
     ]
 
 }
