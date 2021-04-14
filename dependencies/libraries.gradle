@@ -21,6 +21,7 @@ ext {
     ]
 
     libraries = [
+            "abstraction"   : ":libraries:abstraction",
             "network"       : ":libraries:network"
     ]
 

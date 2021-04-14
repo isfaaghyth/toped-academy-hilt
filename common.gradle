@@ -2,6 +2,8 @@ apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-kapt'
 apply plugin: 'dagger.hilt.android.plugin'
+apply plugin: 'kotlin-parcelize'
+apply plugin: 'distribution'
 
 android {
     compileSdkVersion rootProject.ext.compileSdk
@@ -22,9 +24,7 @@ android {
     }
 
     buildTypes {
-        debug {
-
-        }
+        debug {}
         release {
             minifyEnabled false
         }
@@ -33,6 +33,10 @@ android {
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = "1.8"
     }
 
     sourceSets.each {
@@ -44,6 +48,10 @@ android {
             testLogging.events = ["passed", "skipped", "failed"]
         }
     }
+
+    viewBinding {
+        enabled true
+    }
 }
 
 kapt {
@@ -52,6 +60,14 @@ kapt {
 
 dependencies {
     implementation rootProject.ext.main.kotlin
+
+    // common
+    implementation rootProject.ext.misc.constraintLayout
+    implementation rootProject.ext.misc.viewModelKtx
+    implementation rootProject.ext.misc.recyclerView
+
+    // shared-network deps
+    implementation rootProject.ext.network.retrofit
 
     // dagger
     implementation rootProject.ext.misc.dagger

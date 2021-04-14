@@ -8,3 +8,4 @@ include ':shared-data:product'
 
 // common module
 include ':libraries:network'
+include ':libraries:abstraction'

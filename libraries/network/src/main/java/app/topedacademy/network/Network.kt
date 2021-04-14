@@ -9,8 +9,9 @@ import java.util.concurrent.TimeUnit
 object Network {
 
     private const val TIME_OUT = 30L
+    private const val BASE_URL = "https://gist.githubusercontent.com/isfaaghyth/"
 
-    fun builder(url: String = ""): Retrofit {
+    fun builder(url: String = BASE_URL): Retrofit {
         return Retrofit.Builder()
             .baseUrl(url)
             .addConverterFactory(GsonConverterFactory.create())
