@@ -1,5 +1,6 @@
 package com.topedacademy.product
 
+import com.topedacademy.product.entity.Products
 import retrofit2.http.GET
 
 interface ProductServices {

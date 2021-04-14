@@ -5,10 +5,8 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import app.topedacademy.abstraction.data.Result
-import app.topedacademy.abstraction.data.data
-import app.topedacademy.abstraction.data.successOr
 import app.topedacademy.productdagger.domain.ProductUseCase
-import app.topedacademy.productdagger.ui.uimodel.ProductUIModel
+import com.topedacademy.product.uimodel.ProductUIModel
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 

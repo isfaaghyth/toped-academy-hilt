@@ -1,10 +1,10 @@
-package app.topedacademy.productdagger.data.mapper
+package com.topedacademy.product.mapper
 
-import app.topedacademy.productdagger.ui.uimodel.ProductUIModel
-import app.topedacademy.productdagger.ui.uimodel.SellerUIModel
-import com.topedacademy.product.Product
-import com.topedacademy.product.Products
-import com.topedacademy.product.Seller
+import com.topedacademy.product.uimodel.ProductUIModel
+import com.topedacademy.product.uimodel.SellerUIModel
+import com.topedacademy.product.entity.Product
+import com.topedacademy.product.entity.Products
+import com.topedacademy.product.entity.Seller
 
 fun mapTo(seller: Seller): SellerUIModel {
     return SellerUIModel(

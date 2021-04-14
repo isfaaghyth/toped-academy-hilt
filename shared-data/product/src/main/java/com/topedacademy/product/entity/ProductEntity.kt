@@ -1,4 +1,4 @@
-package com.topedacademy.product
+package com.topedacademy.product.entity
 
 import com.google.gson.annotations.Expose
 import com.google.gson.annotations.SerializedName

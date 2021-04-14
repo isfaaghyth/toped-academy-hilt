@@ -1,7 +1,7 @@
-package app.topedacademy.productdagger.data.repository
+package app.topedacademy.productdagger.repository
 
 import com.topedacademy.product.ProductServices
-import com.topedacademy.product.Products
+import com.topedacademy.product.entity.Products
 import javax.inject.Inject
 
 interface ProductRepository {

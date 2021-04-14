@@ -1,4 +1,4 @@
-package app.topedacademy.productdagger.ui.uimodel
+package com.topedacademy.product.uimodel
 
 import android.os.Parcelable
 import kotlinx.android.parcel.Parcelize

@@ -2,9 +2,9 @@ package app.topedacademy.productdagger.domain
 
 import app.topedacademy.abstraction.base.UseCase
 import app.topedacademy.abstraction.di.IoDispatcher
-import app.topedacademy.productdagger.data.mapper.mapTo
-import app.topedacademy.productdagger.data.repository.ProductRepository
-import app.topedacademy.productdagger.ui.uimodel.ProductUIModel
+import com.topedacademy.product.mapper.mapTo
+import app.topedacademy.productdagger.repository.ProductRepository
+import com.topedacademy.product.uimodel.ProductUIModel
 import kotlinx.coroutines.CoroutineDispatcher
 import javax.inject.Inject
 

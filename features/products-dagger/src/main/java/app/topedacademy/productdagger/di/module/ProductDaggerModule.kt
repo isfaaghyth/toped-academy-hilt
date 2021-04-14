@@ -1,8 +1,8 @@
 package app.topedacademy.productdagger.di.module
 
 import app.topedacademy.network.Network
-import app.topedacademy.productdagger.data.repository.ProductRepository
-import app.topedacademy.productdagger.data.repository.ProductRepositoryImpl
+import app.topedacademy.productdagger.repository.ProductRepository
+import app.topedacademy.productdagger.repository.ProductRepositoryImpl
 import app.topedacademy.productdagger.di.ProductDaggerScope
 import com.topedacademy.product.ProductServices
 import dagger.Module

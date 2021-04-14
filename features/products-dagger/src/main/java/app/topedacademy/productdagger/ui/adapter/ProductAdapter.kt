@@ -4,7 +4,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import app.topedacademy.abstraction.databinding.ItemProductBinding
-import app.topedacademy.productdagger.ui.uimodel.ProductUIModel
+import com.topedacademy.product.uimodel.ProductUIModel
 import coil.load
 
 open class ProductAdapter constructor(
