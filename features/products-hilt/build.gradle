@@ -2,6 +2,10 @@ apply from: "$rootDir/common.gradle"
 apply plugin: 'kotlin-android'
 
 dependencies {
+    implementation project(rootProject.ext.libraries.abstraction)
     implementation project(rootProject.ext.libraries.network)
     implementation project(rootProject.ext.data.product)
+
+    implementation rootProject.ext.misc.coil
+    implementation rootProject.ext.misc.coilSvg
 }
