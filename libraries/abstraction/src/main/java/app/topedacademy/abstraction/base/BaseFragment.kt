@@ -13,12 +13,8 @@ abstract class BaseFragment : Fragment() {
 
     abstract fun initObservable()
 
-    abstract fun inject()
-
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        inject()
-
         initView(savedInstanceState)
         initObservable()
     }

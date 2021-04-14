@@ -3,15 +3,17 @@ package app.topedacademy
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
-import app.topedacademy.productdagger.ui.ProductDaggerFragment
+import app.topedacademy.producthilt.ui.ProductHiltFragment
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        setFragment(ProductDaggerFragment())
+        setFragment(ProductHiltFragment())
     }
 
     private fun setFragment(fragment: Fragment) {

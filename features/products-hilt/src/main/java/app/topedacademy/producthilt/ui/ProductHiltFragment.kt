@@ -1,4 +1,4 @@
-package app.topedacademy.productdagger.ui
+package app.topedacademy.producthilt.ui
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -6,23 +6,18 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModelProvider
 import app.topedacademy.abstraction.base.BaseFragment
-import app.topedacademy.productdagger.di.module.CoroutineModule
-import app.topedacademy.productdagger.databinding.FragmentProductDaggerBinding
-import app.topedacademy.productdagger.di.DaggerProductDaggerComponent
-import app.topedacademy.productdagger.di.module.ProductDaggerModule
-import app.topedacademy.productdagger.ui.adapter.ProductAdapter
-import javax.inject.Inject
+import app.topedacademy.producthilt.databinding.FragmentProductHiltBinding
+import app.topedacademy.producthilt.ui.adapter.ProductAdapter
+import dagger.hilt.android.AndroidEntryPoint
 
-class ProductDaggerFragment : BaseFragment() {
+@AndroidEntryPoint
+class ProductHiltFragment : BaseFragment() {
 
-    @Inject lateinit var viewModelFactory: ViewModelProvider.Factory
-
-    private var _binding: FragmentProductDaggerBinding? = null
+    private var _binding: FragmentProductHiltBinding? = null
     private val binding get() = _binding!!
 
-    private val viewModel:ProductDaggerViewModel by viewModels { viewModelFactory }
+    private val viewModel: ProductHiltViewModel by viewModels()
     private val adapter by lazy { ProductAdapter() }
 
     override fun onCreateView(
@@ -30,9 +25,7 @@ class ProductDaggerFragment : BaseFragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        inject()
-
-        _binding = FragmentProductDaggerBinding.inflate(
+        _binding = FragmentProductHiltBinding.inflate(
             inflater,
             container,
             false
@@ -61,15 +54,6 @@ class ProductDaggerFragment : BaseFragment() {
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
-    }
-
-    private fun inject() {
-        DaggerProductDaggerComponent
-            .builder()
-            .coroutineModule(CoroutineModule())
-            .productDaggerModule(ProductDaggerModule())
-            .build()
-            .inject(this)
     }
 
 }
