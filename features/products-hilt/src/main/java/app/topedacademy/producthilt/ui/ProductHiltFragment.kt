@@ -4,31 +4,21 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModelProvider
 import app.topedacademy.abstraction.base.BaseFragment
-import app.topedacademy.abstraction.util.viewModels
 import app.topedacademy.producthilt.databinding.FragmentProductHiltBinding
 import app.topedacademy.producthilt.ui.adapter.ProductAdapter
-import javax.inject.Inject
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class ProductHiltFragment : BaseFragment() {
-
-    @Inject
-    lateinit var viewModelFactory: ViewModelProvider.Factory
 
     private var _binding: FragmentProductHiltBinding? = null
     private val binding get() = _binding!!
 
-    // using viewModel extension to instance using ViewModelProvider
-    private val viewModel by lazy {
-        viewModels<ProductHiltViewModel>(viewModelFactory)
-    }
-
-    // adapter
-    private val adapter by lazy {
-        ProductAdapter()
-    }
+    private val viewModel: ProductHiltViewModel by viewModels()
+    private val adapter by lazy { ProductAdapter() }
 
     override fun onCreateView(
         inflater: LayoutInflater,

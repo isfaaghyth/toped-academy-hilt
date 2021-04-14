@@ -1,12 +1,19 @@
-package app.topedacademy.abstraction.di
+package app.topedacademy.producthilt.di.module
 
+import app.topedacademy.abstraction.di.DefaultDispatcher
+import app.topedacademy.abstraction.di.IoDispatcher
+import app.topedacademy.abstraction.di.MainDispatcher
+import app.topedacademy.abstraction.di.MainImmediateDispatcher
 import dagger.Module
 import dagger.Provides
+import dagger.hilt.InstallIn
+import dagger.hilt.components.SingletonComponent
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.Dispatchers
 
 @Module
-class CoroutineModule {
+@InstallIn(SingletonComponent::class)
+object CoroutinesModule {
 
     @Provides
     @DefaultDispatcher

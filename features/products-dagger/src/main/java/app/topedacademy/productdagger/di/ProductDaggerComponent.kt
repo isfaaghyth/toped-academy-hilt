@@ -1,6 +1,6 @@
 package app.topedacademy.productdagger.di
 
-import app.topedacademy.abstraction.di.CoroutineModule
+import app.topedacademy.productdagger.di.module.CoroutineModule
 import app.topedacademy.productdagger.di.module.ProductDaggerModule
 import app.topedacademy.productdagger.di.module.ProductDaggerViewModelModule
 import app.topedacademy.productdagger.ui.ProductDaggerFragment

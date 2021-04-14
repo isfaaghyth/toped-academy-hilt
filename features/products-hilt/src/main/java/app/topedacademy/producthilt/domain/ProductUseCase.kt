@@ -7,7 +7,9 @@ import com.topedacademy.product.mapper.mapTo
 import com.topedacademy.product.uimodel.ProductUIModel
 import kotlinx.coroutines.CoroutineDispatcher
 import javax.inject.Inject
+import javax.inject.Singleton
 
+@Singleton
 open class ProductUseCase @Inject constructor(
     private val repository: ProductRepository,
     @IoDispatcher dispatcher: CoroutineDispatcher

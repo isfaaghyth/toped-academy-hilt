@@ -7,6 +7,7 @@ import androidx.lifecycle.viewModelScope
 import app.topedacademy.abstraction.data.Result
 import app.topedacademy.producthilt.domain.ProductUseCase
 import com.topedacademy.product.uimodel.ProductUIModel
+import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
@@ -14,6 +15,7 @@ interface ProductHiltContract {
     fun getProducts()
 }
 
+@HiltViewModel
 class ProductHiltViewModel @Inject constructor(
     private val useCase: ProductUseCase
 ) : ViewModel(), ProductHiltContract {

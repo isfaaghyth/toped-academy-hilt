@@ -65,6 +65,7 @@ dependencies {
     implementation rootProject.ext.misc.constraintLayout
     implementation rootProject.ext.misc.viewModelKtx
     implementation rootProject.ext.misc.recyclerView
+    implementation rootProject.ext.misc.fragmentKtx
 
     // shared-network deps
     implementation rootProject.ext.network.retrofit
