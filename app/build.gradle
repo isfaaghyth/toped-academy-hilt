@@ -44,7 +44,6 @@ dependencies {
     implementation project(rootProject.ext.libraries.abstraction)
     implementation project(rootProject.ext.features.products_dagger)
     implementation project(rootProject.ext.features.products_hilt)
-    implementation project(rootProject.ext.data.product)
 
     implementation rootProject.ext.misc.hiltAndroid
     kapt rootProject.ext.misc.hiltAndroidCompiler

@@ -1,4 +1,4 @@
-package com.topedacademy.product
+package app.topedacademy.productdagger.data
 
 import com.topedacademy.product.entity.Products
 import retrofit2.http.GET

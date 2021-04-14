@@ -1,6 +1,6 @@
-package app.topedacademy.productdagger.repository
+package app.topedacademy.productdagger.data.repository
 
-import com.topedacademy.product.ProductServices
+import app.topedacademy.productdagger.data.ProductServices
 import com.topedacademy.product.entity.Products
 import javax.inject.Inject
 

@@ -1,6 +1,6 @@
-package app.topedacademy.producthilt.repository
+package app.topedacademy.producthilt.data.repository
 
-import com.topedacademy.product.ProductServices
+import app.topedacademy.producthilt.data.ProductServices
 import com.topedacademy.product.entity.Products
 import javax.inject.Inject
 import javax.inject.Singleton

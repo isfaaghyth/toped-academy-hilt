@@ -2,7 +2,7 @@ package app.topedacademy.producthilt.domain
 
 import app.topedacademy.abstraction.base.UseCase
 import app.topedacademy.abstraction.di.IoDispatcher
-import app.topedacademy.producthilt.repository.ProductRepository
+import app.topedacademy.producthilt.data.repository.ProductRepository
 import com.topedacademy.product.mapper.mapTo
 import com.topedacademy.product.uimodel.ProductUIModel
 import kotlinx.coroutines.CoroutineDispatcher

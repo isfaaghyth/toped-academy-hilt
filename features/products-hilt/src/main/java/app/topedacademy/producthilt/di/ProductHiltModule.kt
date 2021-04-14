@@ -1,9 +1,9 @@
 package app.topedacademy.producthilt.di
 
 import app.topedacademy.network.Network
-import app.topedacademy.producthilt.repository.ProductRepository
-import app.topedacademy.producthilt.repository.ProductRepositoryImpl
-import com.topedacademy.product.ProductServices
+import app.topedacademy.producthilt.data.ProductServices
+import app.topedacademy.producthilt.data.repository.ProductRepository
+import app.topedacademy.producthilt.data.repository.ProductRepositoryImpl
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
