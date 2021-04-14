@@ -4,7 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.fragment.app.viewModels
+import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.Observer
 import app.topedacademy.abstraction.base.BaseFragment
 import app.topedacademy.producthilt.databinding.FragmentProductHiltBinding
@@ -17,7 +17,7 @@ class ProductHiltFragment : BaseFragment() {
     private var _binding: FragmentProductHiltBinding? = null
     private val binding get() = _binding!!
 
-    private val viewModel: ProductHiltViewModel by viewModels()
+    private val viewModel: ProductHiltViewModel by activityViewModels()
     private val adapter by lazy { ProductAdapter() }
 
     override fun onCreateView(
