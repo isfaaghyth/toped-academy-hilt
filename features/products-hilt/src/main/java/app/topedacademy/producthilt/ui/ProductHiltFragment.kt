@@ -43,7 +43,7 @@ class ProductHiltFragment : BaseFragment() {
 
     override fun initObservable() {
         viewModel.products.observe(this, Observer {
-            adapter.add(it)
+            adapter.add(it.reversed())
         })
 
         viewModel.errorMessage.observe(this, Observer {
