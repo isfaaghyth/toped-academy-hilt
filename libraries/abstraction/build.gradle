@@ -1,3 +1,9 @@
 apply from: "$rootDir/common.gradle"
 
-dependencies {}
+dependencies {
+    // dagger
+    implementation rootProject.ext.misc.dagger
+    implementation rootProject.ext.misc.daggerAndroid
+    kapt rootProject.ext.misc.daggerCompiler
+    kapt rootProject.ext.misc.daggerAndroidCompiler
+}

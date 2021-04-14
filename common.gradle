@@ -1,7 +1,6 @@
 apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-kapt'
-apply plugin: 'dagger.hilt.android.plugin'
 apply plugin: 'kotlin-parcelize'
 apply plugin: 'distribution'
 
@@ -69,16 +68,6 @@ dependencies {
 
     // shared-network deps
     implementation rootProject.ext.network.retrofit
-
-    // dagger
-    implementation rootProject.ext.misc.dagger
-    implementation rootProject.ext.misc.daggerAndroid
-    kapt rootProject.ext.misc.daggerCompiler
-    kapt rootProject.ext.misc.daggerAndroidCompiler
-
-    // hilt
-    implementation rootProject.ext.misc.hiltAndroid
-    kapt rootProject.ext.misc.hiltAndroidCompiler
 
     // appLink
     implementation rootProject.ext.misc.deepLink

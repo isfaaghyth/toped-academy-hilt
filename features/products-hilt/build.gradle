@@ -1,5 +1,6 @@
 apply from: "$rootDir/common.gradle"
 apply plugin: 'kotlin-android'
+apply plugin: 'dagger.hilt.android.plugin'
 
 dependencies {
     implementation project(rootProject.ext.libraries.abstraction)
@@ -8,4 +9,8 @@ dependencies {
 
     implementation rootProject.ext.misc.coil
     implementation rootProject.ext.misc.coilSvg
+
+    // hilt
+    implementation rootProject.ext.misc.hiltAndroid
+    kapt rootProject.ext.misc.hiltAndroidCompiler
 }

@@ -7,4 +7,10 @@ dependencies {
 
     implementation rootProject.ext.misc.coil
     implementation rootProject.ext.misc.coilSvg
+
+    // dagger
+    implementation rootProject.ext.misc.dagger
+    implementation rootProject.ext.misc.daggerAndroid
+    kapt rootProject.ext.misc.daggerCompiler
+    kapt rootProject.ext.misc.daggerAndroidCompiler
 }
