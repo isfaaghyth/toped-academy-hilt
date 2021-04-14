@@ -1,4 +1,4 @@
-package app.topedacademy.producthilt.di.module
+package app.topedacademy.producthilt.di
 
 import app.topedacademy.abstraction.di.DefaultDispatcher
 import app.topedacademy.abstraction.di.IoDispatcher
