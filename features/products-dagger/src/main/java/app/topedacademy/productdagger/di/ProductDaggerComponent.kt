@@ -5,8 +5,9 @@ import app.topedacademy.productdagger.di.module.ProductDaggerModule
 import app.topedacademy.productdagger.di.module.ProductDaggerViewModelModule
 import app.topedacademy.productdagger.ui.ProductDaggerFragment
 import dagger.Component
+import javax.inject.Singleton
 
-@ProductDaggerScope
+@Singleton
 @Component(
     modules = [
         CoroutineModule::class,
