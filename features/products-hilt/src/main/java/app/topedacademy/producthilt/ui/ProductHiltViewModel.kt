@@ -12,14 +12,10 @@ import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
-interface ProductHiltContract {
-    fun getProducts()
-}
-
 @HiltViewModel
 class ProductHiltViewModel @Inject constructor(
     private val useCase: ProductUseCase
-) : ViewModel(), ProductHiltContract {
+) : ViewModel() {
 
     private val _products = MutableLiveData<List<ProductUIModel>>()
     val products: LiveData<List<ProductUIModel>> get() = _products
@@ -27,7 +23,7 @@ class ProductHiltViewModel @Inject constructor(
     private val _errorMessage = MutableLiveData<String>()
     val errorMessage: LiveData<String> get() = _errorMessage
 
-    override fun getProducts() {
+    fun getProducts() {
         viewModelScope.launch {
             when (val result = useCase(Unit)) {
                 is Result.Success -> _products.value = result.successOr(emptyList())
