@@ -7,20 +7,20 @@ import app.topedacademy.producthilt.data.repository.ProductRepositoryImpl
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
-import dagger.hilt.android.components.ActivityComponent
-import dagger.hilt.android.scopes.ActivityScoped
+import dagger.hilt.android.components.ViewModelComponent
+import dagger.hilt.android.scopes.ViewModelScoped
 
 @Module
-@InstallIn(ActivityComponent::class)
+@InstallIn(ViewModelComponent::class)
 object ProductHiltModule {
 
     @Provides
-    @ActivityScoped
+    @ViewModelScoped
     fun provideProductServices(): ProductServices
             = Network.builder().create(ProductServices::class.java)
 
     @Provides
-    @ActivityScoped
+    @ViewModelScoped
     fun provideRepository(
             services: ProductServices
     ): ProductRepository
