@@ -11,13 +11,9 @@ import com.topedacademy.product.uimodel.ProductUIModel
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
-interface ProductDaggerContract {
-    fun getProducts()
-}
-
 class ProductDaggerViewModel @Inject constructor(
     private val useCase: ProductUseCase
-) : ViewModel(), ProductDaggerContract {
+) : ViewModel() {
 
     private val _products = MutableLiveData<List<ProductUIModel>>()
     val products: LiveData<List<ProductUIModel>> get() = _products
@@ -25,7 +21,7 @@ class ProductDaggerViewModel @Inject constructor(
     private val _errorMessage = MutableLiveData<String>()
     val errorMessage: LiveData<String> get() = _errorMessage
 
-    override fun getProducts() {
+    fun getProducts() {
         viewModelScope.launch {
             when (val result = useCase(Unit)) {
                 is Result.Success -> _products.value = result.successOr(emptyList())
