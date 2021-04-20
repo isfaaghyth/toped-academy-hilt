@@ -22,6 +22,6 @@ abstract class ProductDaggerViewModelModule {
     @Binds
     @IntoMap
     @ViewModelKey(ProductDaggerViewModel::class)
-    internal abstract fun bindMovieViewModel(viewModel: ProductDaggerViewModel): ViewModel
+    internal abstract fun bindViewModel(viewModel: ProductDaggerViewModel): ViewModel
 
 }
