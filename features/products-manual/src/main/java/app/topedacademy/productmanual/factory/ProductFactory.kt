@@ -14,23 +14,23 @@ import kotlinx.coroutines.Dispatchers
  */
 class ProductFactory {
 
-    private fun provideProductServices(): ProductServices
-            = Network.builder().create(ProductServices::class.java)
+    private val productServices: ProductServices = Network.builder().create(ProductServices::class.java)
+
+    private val ioDispatcher: CoroutineDispatcher = Dispatchers.IO
 
     private fun provideProductRepository(services: ProductServices): ProductRepository {
         return ProductRepositoryImpl(services)
     }
 
-    private fun provideProductUseCase(repository: ProductRepository, coroutineDispatcher: CoroutineDispatcher): ProductUseCase {
-        return ProductUseCase(repository, coroutineDispatcher)
+    private fun provideProductUseCase(repository: ProductRepository): ProductUseCase {
+        return ProductUseCase(repository, ioDispatcher)
     }
 
-    fun buildUseCase(): ProductUseCase {
+    fun buildProductUseCase(): ProductUseCase {
         return provideProductUseCase(
             repository = provideProductRepository(
-                services = provideProductServices()
-            ),
-            coroutineDispatcher = Dispatchers.IO
+                services = productServices
+            )
         )
     }
 }
