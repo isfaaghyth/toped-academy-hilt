@@ -17,6 +17,7 @@
 ext {
 
     features = [
+            "products_manual"       : ":features:products-manual",
             "products_dagger"       : ":features:products-dagger",
             "products_hilt"         : ":features:products-hilt"
     ]

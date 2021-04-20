@@ -1,3 +1,4 @@
+include ':features:products-manual'
 include ':features:products-dagger'
 include ':features:products-hilt'
 
