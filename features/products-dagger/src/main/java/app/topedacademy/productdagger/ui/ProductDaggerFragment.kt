@@ -4,33 +4,31 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import app.topedacademy.abstraction.base.BaseFragment
 import app.topedacademy.productdagger.databinding.FragmentProductDaggerBinding
-import app.topedacademy.productdagger.di.DaggerProductDaggerComponent
-import app.topedacademy.productdagger.di.module.CoroutineModule
-import app.topedacademy.productdagger.di.module.ProductDaggerModule
 import app.topedacademy.productdagger.ui.adapter.ProductAdapter
-import javax.inject.Inject
 
 class ProductDaggerFragment : BaseFragment() {
-
-    @Inject lateinit var viewModelFactory: ViewModelProvider.Factory
 
     private var _binding: FragmentProductDaggerBinding? = null
     private val binding get() = _binding!!
 
-    private val viewModel:ProductDaggerViewModel by activityViewModels { viewModelFactory }
+    private lateinit var viewModel: ProductDaggerViewModel
+
     private val adapter by lazy { ProductAdapter() }
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        initViewModel()
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        inject()
 
         _binding = FragmentProductDaggerBinding.inflate(
             inflater,
@@ -63,13 +61,8 @@ class ProductDaggerFragment : BaseFragment() {
         _binding = null
     }
 
-    private fun inject() {
-        DaggerProductDaggerComponent
-            .builder()
-            .coroutineModule(CoroutineModule())
-            .productDaggerModule(ProductDaggerModule())
-            .build()
-            .inject(this)
+    private fun initViewModel() {
+        viewModel = ViewModelProvider(this).get(ProductDaggerViewModel::class.java)
     }
 
 }

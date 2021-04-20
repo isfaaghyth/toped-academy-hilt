@@ -1,29 +1,25 @@
-package app.topedacademy.producthilt.di
+package app.topedacademy.producthilt.di.module
 
 import app.topedacademy.network.Network
 import app.topedacademy.producthilt.data.ProductServices
 import app.topedacademy.producthilt.data.repository.ProductRepository
 import app.topedacademy.producthilt.data.repository.ProductRepositoryImpl
+import app.topedacademy.producthilt.di.ProductDaggerScope
 import dagger.Module
 import dagger.Provides
-import dagger.hilt.InstallIn
-import dagger.hilt.android.components.ViewModelComponent
-import dagger.hilt.android.scopes.ViewModelScoped
 
 @Module
-@InstallIn(ViewModelComponent::class)
-object ProductHiltModule {
+class ProductDaggerModule {
 
     @Provides
-    @ViewModelScoped
+    @ProductDaggerScope
     fun provideProductServices(): ProductServices
             = Network.builder().create(ProductServices::class.java)
 
     @Provides
-    @ViewModelScoped
+    @ProductDaggerScope
     fun provideRepository(
-            services: ProductServices
-    ): ProductRepository
-            = ProductRepositoryImpl(services)
+        services: ProductServices
+    ): ProductRepository = ProductRepositoryImpl(services)
 
 }

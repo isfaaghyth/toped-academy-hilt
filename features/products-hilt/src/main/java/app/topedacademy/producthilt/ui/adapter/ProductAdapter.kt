@@ -4,8 +4,8 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import app.topedacademy.abstraction.databinding.ItemProductBinding
-import com.topedacademy.product.uimodel.ProductUIModel
 import coil.load
+import com.topedacademy.product.uimodel.ProductUIModel
 
 open class ProductAdapter constructor(
     private val products: MutableList<ProductUIModel> = mutableListOf()
