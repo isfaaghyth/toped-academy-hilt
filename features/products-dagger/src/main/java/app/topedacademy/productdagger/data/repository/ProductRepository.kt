@@ -7,7 +7,7 @@ interface ProductRepository {
     suspend fun getProducts(): Products
 }
 
-open class ProductRepositoryImpl constructor(
+class ProductRepositoryImpl(
     private val services: ProductServices
 ) : ProductRepository {
 
