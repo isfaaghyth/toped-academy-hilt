@@ -9,9 +9,9 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import app.topedacademy.abstraction.base.BaseFragment
 import app.topedacademy.producthilt.databinding.FragmentProductHiltBinding
-import app.topedacademy.producthilt.di.DaggerProductDaggerComponent
+import app.topedacademy.producthilt.di.DaggerProductHiltComponent
 import app.topedacademy.producthilt.di.module.CoroutineModule
-import app.topedacademy.producthilt.di.module.ProductDaggerModule
+import app.topedacademy.producthilt.di.module.ProductHiltModule
 import app.topedacademy.producthilt.ui.adapter.ProductAdapter
 import javax.inject.Inject
 
@@ -64,10 +64,10 @@ class ProductHiltFragment : BaseFragment() {
     }
 
     private fun inject() {
-        DaggerProductDaggerComponent
+        DaggerProductHiltComponent
             .builder()
             .coroutineModule(CoroutineModule())
-            .productDaggerModule(ProductDaggerModule())
+            .productHiltModule(ProductHiltModule())
             .build()
             .inject(this)
     }
